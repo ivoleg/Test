@@ -64,7 +64,6 @@ public class Sightseeing {
     public static void main(String[] args) {
         HashMap<Integer,String> firstDay = backpackEx(20, 32, time);  // т.к работать с дробными числами неудобно, я домножил все часы и общее необходимое время на 2.
         String list = "В первый день стоит посетить: ";
-        System.out.println(firstDay);
         int[] newTime = Arrays.copyOf(time, time.length);
         for (int i = 0; i < newTime.length; i++) {
             if (firstDay.containsKey(i+1)) {
@@ -79,7 +78,6 @@ public class Sightseeing {
                 list+=secondDay.get(i+1) + ", ";
             }
         }
-        System.out.println(secondDay);
         System.out.println(list.substring(0, list.length() - 2) + "."); //убираем запятую с конца и меняем ее на точку.
     }
 }
